@@ -18,5 +18,9 @@ def send_welcome(message):
     # Send a welcome message with the custom keyboard
     bot.reply_to(message, "Welcome to the bot! Please select an option:", reply_markup=keyboard)
 
+@bot.message_handler(func=lambda message: True)
+def handle_message(message):
+    # Respond to user message
+    bot.reply_to(message, "You said: " + message.text)
 # Start the bot
 bot.polling()
