@@ -12,7 +12,8 @@ def send_welcome(message):
     button1 = types.KeyboardButton('Button 1')
     button2 = types.KeyboardButton('Button 2')
     button3 = types.KeyboardButton('Button 3')
-    keyboard.add(button1, button2, button3)
+    button4 = types.KeyboardButton('Button 4')
+    keyboard.add(button1, button2, button3, button4)
 
     # Send a welcome message with the custom keyboard
     bot.reply_to(message, "Welcome to the bot! Please select an option:", reply_markup=keyboard)
